@@ -5,8 +5,8 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 
 # Menyiapkan data
-day = st.dataframe(pd.read_csv(r'.day.csv'))
-hour = st.dataframe(pd.read_csv(r'.hour.csv'))
+day = st.dataframe(pd.read_csv(r'day.csv'))
+hour = st.dataframe(pd.read_csv(r'hour.csv'))
 df = day.merge(hour, on='dteday', how='inner', suffixes=('_daily', '_hourly'))
 
 # Mengatur judul dan deskripsi aplikasi
