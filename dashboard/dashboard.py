@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 # Menyiapkan data
 day = pd.read_csv('/data/day.csv')
-hour = pd.read_csv('/data/day.csv")
+hour = pd.read_csv('/data/day.csv')
 
 
 df = day.merge(hour, on='dteday', how='inner', suffixes=('_daily', '_hourly'))
