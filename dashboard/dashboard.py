@@ -4,8 +4,8 @@ import seaborn as sns
 import plotly.express as px
 import matplotlib.pyplot as plt
 
-day = pd.read_csv('https://github.com/Exymuse/bike-sharing-Analysis/blob/e5fe3374e06bef3f79d471cef4262ba73ffab501/dashboard/day.csv')
-hour = pd.read_csv('https://github.com/Exymuse/bike-sharing-Analysis/blob/e5fe3374e06bef3f79d471cef4262ba73ffab501/dashboard/hour.csv')
+day = pd.read_csv('day.csv')
+hour = pd.read_csv('hour.csv')
 
 
 df = day.merge(hour, on='dteday', how='inner', suffixes=('_daily', '_hourly'))
