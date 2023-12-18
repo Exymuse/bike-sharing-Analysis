@@ -5,8 +5,11 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 
 # Menyiapkan data
-day = pd.read_csv('/data/day.csv')
-hour = pd.read_csv('/data/hour.csv')
+url_day = 'https://github.com/Exymuse/bike-sharing-Analysis/blob/e5fe3374e06bef3f79d471cef4262ba73ffab501/dashboard/day.csv'
+url_hour = 'https://github.com/Exymuse/bike-sharing-Analysis/blob/e5fe3374e06bef3f79d471cef4262ba73ffab501/dashboard/hour.csv'
+
+day = pd.read_csv(url_day)
+hour = pd.read_csv(url_hour)
 
 
 df = day.merge(hour, on='dteday', how='inner', suffixes=('_daily', '_hourly'))
