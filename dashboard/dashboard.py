@@ -5,8 +5,8 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 
 # Menyiapkan data
-day = pd.read_csv("day.csv", encoding="unicode_escape"))
-hour = pd.read_csv("hour.csv", encoding="unicode_escape"))
+day = pd.read_csv("day.csv", encoding="unicode_escape")
+hour = pd.read_csv("hour.csv", encoding="unicode_escape")
 
 
 df = day.merge(hour, on='dteday', how='inner', suffixes=('_daily', '_hourly'))
